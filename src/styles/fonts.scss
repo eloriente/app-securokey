@@ -1,0 +1,33 @@
+/*
+* Inter Font Use
+*/
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: lighter;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Medium.ttf');
+}
