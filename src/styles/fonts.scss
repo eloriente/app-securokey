@@ -22,12 +22,46 @@
 
 @font-face {
   font-family: 'Inter';
-  font-weight: lighter;
-  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Light.ttf');
+  font-weight: 400;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Medium.ttf');
 }
 
 @font-face {
   font-family: 'Inter';
+  font-weight: lighter;
+  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Light.ttf');
+}
+
+/*
+* IBM Plex Mono Font Use
+*/
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: bold;
+  src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: 600;
+  src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: normal;
+  src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
   font-weight: 400;
-  src: local('Inter') format('ttf') url('/public/fonts/Inter/Inter-Medium.ttf');
+  src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: lighter;
+  src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-Light.ttf');
 }
