@@ -1,0 +1,1 @@
+export { SliderStyledComponent } from './slider.styled';
