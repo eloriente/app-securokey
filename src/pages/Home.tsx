@@ -1,9 +1,11 @@
+import { MainStyledComponent } from '../components/ui';
+
 function HomePage() {
 
   return (
-    <p>
-      Jeje GOZ...
-    </p>
+    <MainStyledComponent>
+
+    </MainStyledComponent>
   )
 
 }

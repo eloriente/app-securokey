@@ -1,0 +1,1 @@
+export { MainStyledComponent } from "./main.styled";
