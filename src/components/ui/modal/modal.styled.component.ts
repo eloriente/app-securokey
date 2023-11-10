@@ -11,7 +11,7 @@ export const ModalStyledComponent = styled.div`
   flex-wrap: nowrap;
   justify-content: space-evenly;
   height: 45vh;
-  width: 60vh;
+  width: 80vh;
   min-height: 10vh;
   min-width: 15vw;
   padding: 15px 40px;
