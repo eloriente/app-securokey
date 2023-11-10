@@ -1,2 +1,3 @@
-export { MainStyledComponent } from "./main.styled";
-export { ModalStyledComponent } from './modal.styled';
+export { MainStyledComponent } from "./main/main.styled.component";
+export { ModalStyledComponent } from './modal/modal.styled.component';
+export { HeaderComponent } from './header/header.component';

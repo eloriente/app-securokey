@@ -1,2 +1,2 @@
-export { SliderStyledComponent } from './slider.styled';
-export { FormStyledComponent } from './form.styled';
+export { SliderStyledComponent } from './slider/slider.styled.component';
+export { FormStyledComponent } from './form/form.styled.component';
