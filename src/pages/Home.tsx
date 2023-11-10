@@ -1,5 +1,5 @@
 // Vendors
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Typography, Button } from '@mui/material';
 import { useForm } from 'react-hook-form';
 // Components
@@ -24,7 +24,11 @@ function HomePage() {
 
   function handlePasswordGeneration() {
     setPasswordGenerated(generatePassword(passwordLength))
-  }
+  };
+
+  useEffect(() => {
+    handlePasswordGeneration();
+  }, []);
 
   return (
     <MainStyledComponent>
