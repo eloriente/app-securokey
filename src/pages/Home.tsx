@@ -19,7 +19,7 @@ function HomePage() {
   const [ passwordGenerated, setPasswordGenerated ] = useState<string>();
   const { register, handleSubmit } = useForm<FormData>();
 
-  const handleChange = (event: Event, newValue: number | number[]) => {
+  const handleChange = (_event: Event, newValue: number | number[]) => {
     setPasswordLength(newValue as number);
   };
 
