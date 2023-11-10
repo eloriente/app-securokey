@@ -1,1 +1,1 @@
-export { generatePassword } from './passwordGenerator';
+export { generatePassword } from './password-generator/passwordGenerator';
