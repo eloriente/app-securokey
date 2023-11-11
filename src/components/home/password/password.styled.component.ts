@@ -7,6 +7,7 @@ export const PasswordStyledComponent = styled(Typography)`
     font-family: var(--font-monospace);
     font-size: 2rem;
     margin: 10px 0;
+    text-align: center;
     word-wrap: break-word;
     width: 100%;
   }
