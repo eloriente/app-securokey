@@ -5,6 +5,5 @@ export const MainStyledComponent = styled.main`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  flex: 1;
 `

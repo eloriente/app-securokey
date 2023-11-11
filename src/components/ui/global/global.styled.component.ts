@@ -86,6 +86,10 @@ export const GlobalStyled = createGlobalStyle`
 
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     background-color: var(--background);
@@ -93,4 +97,12 @@ export const GlobalStyled = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     margin: 0;
   }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+
 `

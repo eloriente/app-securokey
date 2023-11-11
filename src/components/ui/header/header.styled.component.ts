@@ -5,7 +5,8 @@ const HeaderStyledComponent = styled.header`
   display: flex;
   flex-direction: row;
   padding: 1rem 2rem;
-  width: 100%;
+  heigth: auto;
+  width: auto;
 `;
 
 export default HeaderStyledComponent;
