@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'react';
 import { Typography, Button, FormControlLabel } from '@mui/material';
 import { useForm } from 'react-hook-form';
-// Components
+// Styles
 import { MainStyledComponent, ModalStyledComponent, CheckboxStyledComponent } from '../components/ui';
 import { SliderStyledComponent, FormStyledComponent, FormGroupComponent } from '../components/home';
+// Utils
 import { generatePassword } from '../utils/';
 
 type FormData = {
