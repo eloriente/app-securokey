@@ -4,7 +4,7 @@ import { Typography, Button, FormControlLabel } from '@mui/material';
 import { useForm } from 'react-hook-form';
 // Styles
 import { MainStyledComponent, ModalStyledComponent, CheckboxStyledComponent } from '../components/ui';
-import { SliderStyledComponent, FormStyledComponent, FormGroupComponent } from '../components/home';
+import { SliderStyledComponent, FormStyledComponent, FormGroupComponent, PasswordStyledComponent } from '../components/home';
 // Utils
 import { generatePassword } from '../utils/';
 
@@ -41,9 +41,9 @@ function HomePage() {
         </Typography>
         {
           (passwordGenerated)
-          ? <Typography variant='h3' sx={{fontFamily: 'var(--font-monospace)'}}>
+          ? <PasswordStyledComponent variant='h3' sx={{fontFamily: 'var(--font-monospace)'}}>
               {passwordGenerated}
-            </Typography>
+            </PasswordStyledComponent>
           : <></>
         }
         <SliderStyledComponent

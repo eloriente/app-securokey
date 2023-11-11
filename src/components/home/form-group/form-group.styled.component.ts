@@ -8,6 +8,7 @@ export const FormGroupStyledComponent = styled(FormGroup)`
     align-items: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
     margin: 2rem 0;
   }
