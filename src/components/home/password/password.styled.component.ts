@@ -8,5 +8,6 @@ export const PasswordStyledComponent = styled(Typography)`
     font-size: 2rem;
     margin: 10px 0;
     word-wrap: break-word;
+    width: 100%;
   }
 `
