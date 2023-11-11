@@ -3,7 +3,7 @@ import { FormGroup } from "@mui/material";
 import styled from "styled-components";
 
 export const FormGroupStyledComponent = styled(FormGroup)`
-  &.css-dmmspl-MuiFormGroup-root {
+  &.MuiFormGroup-root {
     align-content: center;
     align-items: center;
     display: flex;
