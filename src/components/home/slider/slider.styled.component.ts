@@ -6,5 +6,10 @@ export const SliderStyledComponent = styled(Slider)`
     color: var(--font-color);
     height: 10px;
     width: 50vh;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
   }
 `

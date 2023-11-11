@@ -15,4 +15,10 @@ export const ModalStyledComponent = styled.div`
   min-height: 10vh;
   min-width: 15vw;
   padding: 15px 40px;
+
+  @media (max-width: 767px) {
+    height: auto;
+    width: 90%;
+  }
+
 `
