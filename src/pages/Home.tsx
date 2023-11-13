@@ -1,12 +1,14 @@
 // Vendors
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Typography, FormControlLabel } from '@mui/material';
+import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 import { useForm } from 'react-hook-form';
 // Styles
-import { MainStyledComponent, ModalStyledComponent, CheckboxStyledComponent, ButtonStyledComponent } from '../components/ui';
-import { SliderStyledComponent, FormStyledComponent, FormGroupComponent, PasswordStyledComponent } from '../components/home';
+import { MainStyledComponent, ModalStyledComponent, CheckboxStyledComponent, ButtonStyledComponent, IconButtonStyledComponent } from '../components/ui';
+import { SliderStyledComponent, FormStyledComponent, FormGroupComponent, PasswordStyledComponent, SliderContainerStyledComponent } from '../components/home';
 // Utils
 import { copyIntoClipboard, generatePassword } from '../utils/';
+import { UiContext } from '../context';
 
 type FormData = {
   letters: boolean;
@@ -16,25 +18,31 @@ type FormData = {
 
 function HomePage() {
 
-  const [ passwordLength, setPasswordLength ] = useState<number>(12);
-  const [ passwordGenerated, setPasswordGenerated ] = useState<string>();
   const { register, handleSubmit, watch } = useForm<FormData>();
+  const [ passwordLength, setPasswordLength ] = useState<number>(12);
+  const [ passwordOptions, setPasswordOptions ] = useState<FormData>({letters: watch('letters'), numbers: watch('numbers'), special_characters: watch('special_characters')})
+  const [ passwordGenerated, setPasswordGenerated ] = useState<string>();
+  const { handleAlertMessage } = useContext(UiContext);
 
   const handleChange = (_event: Event, newValue: number | number[]) => {
     setPasswordLength(newValue as number);
   };
 
-  function handlePasswordGeneration(passwordOptions: FormData) {
-    setPasswordGenerated(generatePassword(passwordLength, passwordOptions));
+  function handlePasswordGeneration(options: FormData) {
+    setPasswordGenerated(generatePassword(passwordLength, options));
   };
 
   function handleCopyToClipboard() {
-    if(passwordGenerated) copyIntoClipboard(passwordGenerated);
+    if(passwordGenerated) {
+      copyIntoClipboard(passwordGenerated);
+      handleAlertMessage({display: true, message: 'Password copy into clipboard', severity: 'info'});
+    };
   }
 
   useEffect(() => {
-    const passwordOptions = {letters: watch('letters'), numbers: watch('numbers'), special_characters: watch('special_characters')};
-    handlePasswordGeneration(passwordOptions);
+    const options = {letters: watch('letters'), numbers: watch('numbers'), special_characters: watch('special_characters')};
+    setPasswordOptions(options)
+    handlePasswordGeneration(options);
   }, [passwordLength, watch('letters'), watch('numbers'), watch('numbers'), watch('special_characters')])
 
   return (
@@ -45,12 +53,15 @@ function HomePage() {
         </Typography>
         {
           (passwordGenerated)
-          ? <PasswordStyledComponent variant='h3' passwordLength={passwordLength}>
+          ? <PasswordStyledComponent variant='h3' password_length={passwordLength}>
               {passwordGenerated}
+              <IconButtonStyledComponent aria-label="delete" color="primary" onClick={() => handlePasswordGeneration(passwordOptions)}>
+                <ReplayRoundedIcon />
+              </IconButtonStyledComponent>
             </PasswordStyledComponent>
           : <></>
         }
-        <div>
+        <SliderContainerStyledComponent>
           <Typography sx={{fontSize: 14}}>
             Password length
           </Typography>
@@ -63,7 +74,7 @@ function HomePage() {
             max={24}
             onChange={handleChange}
           />
-        </div>
+        </SliderContainerStyledComponent>
         <FormStyledComponent onSubmit={handleSubmit(handleCopyToClipboard)}>
           <FormGroupComponent>
             <FormControlLabel control={<CheckboxStyledComponent defaultChecked {...register('letters')}/>} label="Letters" />
