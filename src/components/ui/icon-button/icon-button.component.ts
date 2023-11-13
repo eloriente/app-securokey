@@ -9,4 +9,12 @@ export const IconButtonStyledComponent = styled(IconButton)`
         font-size: 2rem;
       }
     }
+
+    @media (max-width: 380px) {
+      &.MuiButtonBase-root{
+        .MuiSvgIcon-root{
+          font-size: 1.5rem;
+        }
+      }
+    }
 `;

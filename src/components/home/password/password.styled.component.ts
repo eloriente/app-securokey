@@ -22,4 +22,11 @@ export const PasswordStyledComponent = styled(Typography)<{password_length: numb
     word-wrap: break-word;
     width: 100%;
   }
+
+  @media (max-width: 380px) {
+    &.MuiTypography-root{
+      font-size: 1rem;
+    }
+  }
+
 `
