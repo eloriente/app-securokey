@@ -1,9 +1,20 @@
 import { Typography } from "@mui/material";
 import styled from "styled-components";
 
-export const PasswordStyledComponent = styled(Typography)`
+function passwordStatus(password_length: number): string {
+  switch(true) {
+    case password_length < 12:
+      return 'orange';
+    case password_length >= 12:
+      return 'yellowgreen'
+    default:
+      return 'var(--font-color)';
+  }
+}
+
+export const PasswordStyledComponent = styled(Typography)<{password_length: number}>`
   &.MuiTypography-root{
-    color: greenyellow;
+    color: ${({password_length}) => passwordStatus(password_length)};
     font-family: var(--font-monospace);
     font-size: 2rem;
     margin: 10px 0;
