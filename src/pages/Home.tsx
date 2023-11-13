@@ -45,7 +45,7 @@ function HomePage() {
         </Typography>
         {
           (passwordGenerated)
-          ? <PasswordStyledComponent variant='h3' sx={{fontFamily: 'var(--font-monospace)'}}>
+          ? <PasswordStyledComponent variant='h3' passwordLength={passwordLength}>
               {passwordGenerated}
             </PasswordStyledComponent>
           : <></>
