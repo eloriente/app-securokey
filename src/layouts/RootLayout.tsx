@@ -1,7 +1,7 @@
 // Vendors
 import { Outlet } from "react-router";
 // Components
-import { CustomToastComponent, HeaderComponent } from "../components/ui";
+import { CustomToastComponent, HeaderComponent, FooterComponent } from "../components/ui";
 import { UiProvider } from "../context";
 
 function RootLayout() {
@@ -10,6 +10,7 @@ function RootLayout() {
       <HeaderComponent />
       <Outlet />
       <CustomToastComponent />
+      <FooterComponent/>
     </UiProvider>
   )
 }

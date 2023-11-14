@@ -75,6 +75,7 @@ export const GlobalStyled = createGlobalStyle`
     --background: rgba(255, 255, 255, 1);
     --border-color: rgba(18, 18, 18, 1);
     --font-color: rgba(0, 0, 0, 1);
+    --font-sansserif: 'Inter', sans-serif;
     --font-monospace: "IBMPlexMono", monospace;
 
 
@@ -94,7 +95,7 @@ export const GlobalStyled = createGlobalStyle`
   body {
     background-color: var(--background);
     color: var(--font-color);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sansserif);
     margin: 0;
   }
 
