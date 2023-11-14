@@ -17,6 +17,7 @@ export const ModalStyledComponent = styled.div`
   padding: 15px 40px;
 
   @media (max-width: 767px) {
+    padding: 15px 20px;
     height: auto;
     width: 90%;
   }

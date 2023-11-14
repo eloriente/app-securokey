@@ -70,7 +70,7 @@ function HomePage() {
             valueLabelDisplay="auto"
             step={2}
             marks
-            min={4}
+            min={6}
             max={24}
             onChange={handleChange}
           />

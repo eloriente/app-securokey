@@ -12,4 +12,13 @@ export const FormGroupStyledComponent = styled(FormGroup)`
     justify-content: space-around;
     margin: 2rem 0;
   }
+
+  @media (max-width: 380px) {
+    &.MuiFormGroup-root {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
 `
