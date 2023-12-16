@@ -14,8 +14,13 @@ export const FooterStyledComponent = styled.footer`
 
 export const FooterTypographyStyledComponent = styled(Typography)<{fontVariant: 'sans-serif' | 'monospace'}>`
   &.MuiTypography-root{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
     font-size: 11px;
     font-family: ${({fontVariant}) => fontVariant && (fontVariant === 'sans-serif') ? 'var(--font-monospace)' : 'var(--font-monospace)'};
+    justify-content: center;
+    gap: 5px;
   }
 
   @media (max-width: 380px) {

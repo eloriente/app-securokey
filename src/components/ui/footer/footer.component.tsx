@@ -2,6 +2,8 @@
 import { IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
 // Styles
 import { FooterStyledComponent, FooterTypographyStyledComponent } from "./footer.styled.component"
 import { FooterLinksTypes } from './types/footer-links.component';
@@ -9,14 +11,14 @@ import { FooterLinksTypes } from './types/footer-links.component';
 export const FooterComponent = () => {
 
   const links: FooterLinksTypes = {
-    github: { url: 'https://github.com/eladioltb' },
-    linkedin: { url: 'https://www.linkedin.com/in/eladio-loriente/' }
+    github: { url: 'https://github.com/eloriente' },
+    linkedin: { url: 'https://www.linkedin.com/in/eloriente/' }
   }
 
   return (
     <FooterStyledComponent>
       <FooterTypographyStyledComponent fontVariant="monospace"> 
-        Web designed and developed by Eladio Loriente
+        <CodeOutlinedIcon /> with <FavoriteOutlinedIcon style={{color: 'red'}}/> by Eladio Loriente
       </FooterTypographyStyledComponent> 
       <FooterTypographyStyledComponent>
         {

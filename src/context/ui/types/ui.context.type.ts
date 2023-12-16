@@ -1,3 +1,7 @@
+export type UiThemeType =
+  | 'dark'
+  | 'light'
+
 export type UiAlert = {
   display: boolean,
   message: string,
@@ -5,7 +9,16 @@ export type UiAlert = {
 }
 
 export type UiTypesContext = {
-  alert: UiAlert
+  alert?: UiAlert,
+  theme?: UiThemeType,
 }
 
-export type UiActionType = { type: '[UI] - Display Alert', payload: UiAlert }
+export type UiTypeAction = 
+  | '[UI] - Display Alert'
+  | '[UI] - Set Theme'
+  | '[UI] - Swwith Theme'
+
+export type UiActionType = { 
+  type: UiTypeAction, 
+  payload: UiTypesContext
+}

@@ -1,6 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+// Vendors
+import { createGlobalStyle, css } from "styled-components";
 
-export const FontsStyled = createGlobalStyle`
+const FontsStyled = createGlobalStyle`
   /*
   * Inter Font Use
   */
@@ -68,24 +69,29 @@ export const FontsStyled = createGlobalStyle`
     font-weight: lighter;
     src: local('IBMPlexMono') format('ttf') url('/public/fonts/IBMPlexMono/IBMPlexMono-Light.ttf');
   }
-`
+`;
 
-export const GlobalStyled = createGlobalStyle`
+const RootStyled = css`
   :root {
+    --font-sansserif: 'Inter', sans-serif;
+    --font-monospace: "IBMPlexMono", monospace;
+  }
+
+  [data-theme='light'] {
     --background: rgba(255, 255, 255, 1);
     --border-color: rgba(18, 18, 18, 1);
     --font-color: rgba(0, 0, 0, 1);
-    --font-sansserif: 'Inter', sans-serif;
-    --font-monospace: "IBMPlexMono", monospace;
-
-
-    @media (prefers-color-scheme: dark) {
-      --background: rgba(18, 18, 18, 1);
-      --border-color: rgba(35, 35, 35, 1);
-      --font-color: rgba(241, 241, 241, 1);
-    }
-
   }
+
+  [data-theme='dark'] {
+    --background: rgba(18, 18, 18, 1);
+    --border-color: rgba(35, 35, 35, 1);
+    --font-color: rgba(241, 241, 241, 1);
+  }
+`;
+
+const GlobalStyled = createGlobalStyle`
+  ${RootStyled}
 
   * {
     box-sizing: border-box;
@@ -105,5 +111,9 @@ export const GlobalStyled = createGlobalStyle`
     height: 100vh;
     width: 100%;
   }
+`;
 
-`
+export {
+  FontsStyled,
+  GlobalStyled
+}
