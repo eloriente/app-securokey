@@ -6,6 +6,7 @@ import { UiActionType, UiAlert, UiThemeType, UiTypesContext } from "./types/ui.c
 import { getLocalDataTheme, setAttributeDataTheme, setLocalDataTheme } from "./handlers/ui.context.handle";
 
 interface UiContextProps extends UiTypesContext {
+  alert?: UiAlert,
   theme?: 'dark' | 'light';
   handleAlertMessage: (alert: UiAlert) => void;
   handleSetTheme: (theme: UiThemeType) => void;

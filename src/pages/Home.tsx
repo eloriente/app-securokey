@@ -5,7 +5,7 @@ import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 import { useForm } from 'react-hook-form';
 // Styles
 import { MainStyledComponent, ModalStyledComponent, CheckboxStyledComponent, ButtonStyledComponent, IconButtonStyledComponent } from '../components/ui';
-import { SliderStyledComponent, FormStyledComponent, FormGroupComponent, PasswordStyledComponent, SliderContainerStyledComponent } from '../components/home';
+import { SliderStyledComponent, FormStyledComponent, FormGroupComponent, PasswordStyledComponent, SliderContainerStyledComponent } from '../components/atoms';
 // Utils
 import { copyIntoClipboard, generatePassword } from '../utils/';
 import { UiContext } from '../context';

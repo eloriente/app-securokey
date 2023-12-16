@@ -3,9 +3,9 @@ export type UiThemeType =
   | 'light'
 
 export type UiAlert = {
-  display: boolean,
-  message: string,
-  severity: 'warning' | 'success' | 'error' | 'info'
+  display?: boolean,
+  message?: string,
+  severity?: 'warning' | 'success' | 'error' | 'info'
 }
 
 export type UiTypesContext = {

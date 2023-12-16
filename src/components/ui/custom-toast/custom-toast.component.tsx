@@ -9,7 +9,7 @@ export const CustomToastComponent = () => {
     if (reason === 'clickaway') {
       return;
     }
-    handleAlertMessage({ ...alert, display: false });
+    handleAlertMessage({...alert, display: false});
   };
   return (
     <Snackbar 

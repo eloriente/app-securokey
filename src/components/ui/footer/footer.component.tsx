@@ -12,7 +12,7 @@ export const FooterComponent = () => {
 
   const links: FooterLinksTypes = {
     github: { url: 'https://github.com/eloriente' },
-    linkedin: { url: 'https://www.linkedin.com/in/eloriente/' }
+    linkedin: { url: 'https://www.linkedin.com/in/eloriente' }
   }
 
   return (
