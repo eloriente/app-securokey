@@ -23,9 +23,9 @@ export const PasswordStyledComponent = styled(Typography)<{password_length: numb
     width: 100%;
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 767px) {
     &.MuiTypography-root{
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 
